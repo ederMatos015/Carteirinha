@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>carteirinha</title>
+</head>
+
+<body>
+    <h1 class="sua-carteirinha">Aqui está sua carteirinha!!!</h1>
+    <main>
+        <div class="scene scene--card">
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <div>
+                        <img src="./src/foto 3x4.jpeg" alt="foto" class="foto__3x4">
+                        <img src="./src/faders_logo-removebg-preview.png" alt="LOGO" class="logo_faders">
+                        <img src="./src/brasao_gov-removebg-preview.png" alt="BRASÃO" class="brasao_gov">
+                    </div>
+                    <div class="dados_frente">
+                        <div class="descricao_governo">GOVERNO DO ESTADO DO RIO GRANDE DO SUL
+                            <p class="p1">FUNDAÇÃO DE ARTICULAÇÃO E DESENVOLVIMENTO DE POLÍTICAS PÚBLICAS PARA PESSOAS COM DEFICIÊNCIA E PESSOAS COM ALTAS HABILIDADES NO RS</p>
+                            <p class="p2">CARTEIRA DE IDENTIFICAÇÃO PARA PESSOAS COM DEFICIÊNCIA</p>
+                        </div>
+                        <div class="nome_usuario" input type="text">Nome:</div>                       
+                        <div class="tipo_sanguineo">Tipo sanguíneo:</div>
+                        <div class="rg">RG:</div>
+                        <div class="data_nascimento">Data de nascimento:</div>
+                        <div class="local_nascimento">Local de nascimento:</div>
+                        <div class="filiacao">Filiação:</div>
+                        <div class="endereco_residencial">Endereço residencial:</div>
+                    </div>
+                </div>
+                <div class="card__face card__face--back">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://curious-halva-771b6c.netlify.app/&size=50x50" alt="QR CODE" class="qr_code">
+                    <div class="dados_verso">
+                        <div class="responsaveis_legais">Reponsáveis legais</div>
+                        <div class="nome_responsavel_1">Nome:</div>
+                        <div class="rg_responsavel_1">RG:</div>
+                        <div class="contato">Contato:</div>
+                        <div class="nome_responsavel_2">Nome:</div>
+                        <div class="rg_responsavel_2">RG:</div>
+                        <div class="contato_2">Contato:</div>
+                        <div class="orgao_expedidor">Orgão expedidor:  FADERS  Acessibilidade e Inclusão</div>
+                        <div class="data_emissao">DATA DE EMISSÃO: 25/08/2022</div>
+                        <div class="data_validade">DATA DE VALIDADE: 30/12/2027</div>
+                        <div class="descricao_vertical">VÁLIDA EM TODO TERRITÓRIO ESTADUAL</div>
+                        <div class="lei_federal">DE ACORDO COM A LEI FEDERAL 13.977 DE 8 DE JANEIRO DE 2020</div>
+                        <div class="lei_federal_2">E O DECRETO ESTADUAL N° 55.995 DE 14 DE JULHO DE 2021.    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <p class="clique-aqui">Clique na carteira para visualizar o verso</p>
+
+    <script>
+        var cards = document.querySelectorAll('.card');
+
+        [...cards].forEach((card) => {
+            card.addEventListener('click', function () {
+                card.classList.toggle('is-flipped');
+            });
+        });
+    </script>
